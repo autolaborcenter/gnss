@@ -23,7 +23,7 @@ pub struct WGS84 {
 }
 
 /// WGS84 与东北天互转的当地参考点，缓存了一些转换用到的中间变量
-#[derive(Debug)]
+#[derive(Clone, Debug)]
 pub struct LocalReference {
     origin: WGS84, // 东北天原点对应的 WGS84 参考点
     radius: f64,   // 参考点处的地球等效半径
